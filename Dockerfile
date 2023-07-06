@@ -21,9 +21,6 @@ FROM nginx:1.21.0
 # Copy the built application from the previous stage
 COPY --from=builder /app/dist/angular-demo /usr/share/nginx/html
 
-# Copy the nginx configuration file (optional)
-COPY nginx.conf /etc/nginx/nginx.conf
-
 # Expose port 80 for the NGINX server
 EXPOSE 80
 
