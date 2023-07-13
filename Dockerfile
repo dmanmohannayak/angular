@@ -1,5 +1,5 @@
 # Stage 1: Build the Angular application
-FROM node:14.17.0 AS builder
+FROM node:16.14 AS builder
 
 WORKDIR /app
 
@@ -26,3 +26,6 @@ EXPOSE 80
 
 # Start NGINX server
 CMD ["nginx", "-g", "daemon off;"]
+
+
+
